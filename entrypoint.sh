@@ -10,7 +10,8 @@ git config --global user.name "${INPUT_USERNAME}"
 git config --global user.email "${INPUT_EMAIL}"
 
 # setup hexo env
-npm install -g hexo-cli
+npm install -g hexo@latest
+npm install -g gulp@latest
 npm install
 
 # generate&publish
@@ -23,6 +24,8 @@ if ${INPUT_IF_KEEP_COMMIT_HISTORY}; then
         git clone --branch "${INPUT_GITHUB_PAGE_REPOSITORY_BRANCH}" "https://github.com/${GITHUB_ACTOR}/${GITHUB_ACTOR}.github.io.git" .deploy_git
     fi
 fi
+
+gulp
 
 hexo d
 
