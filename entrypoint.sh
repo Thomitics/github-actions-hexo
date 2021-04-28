@@ -12,6 +12,8 @@ git config --global user.email "${INPUT_EMAIL}"
 # setup hexo env
 npm install -g hexo@latest
 npm install -g gulp@latest
+npm install hexo-generator-sitemap --save
+npm install hexo-generator-baidu-sitemap --save
 npm install
 
 # generate&publish
